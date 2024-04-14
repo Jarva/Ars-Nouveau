@@ -8,6 +8,7 @@ import com.hollingsworth.arsnouveau.common.network.Networking;
 import com.hollingsworth.arsnouveau.common.network.PacketClientDelayEffect;
 import com.hollingsworth.arsnouveau.common.spell.augment.AugmentDurationDown;
 import com.hollingsworth.arsnouveau.common.spell.augment.AugmentExtendTime;
+import com.hollingsworth.arsnouveau.common.spell.augment.AugmentRandomize;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
@@ -37,6 +38,10 @@ public class EffectDelay extends AbstractEffect {
         int duration = GENERIC_INT.get() + EXTEND_TIME.get() * spellStats.getBuffCount(AugmentExtendTime.INSTANCE) * 20;
         int decreasedTime = EXTEND_TIME.get() * 10 * spellStats.getBuffCount(AugmentDurationDown.INSTANCE);
         duration -= decreasedTime;
+        if (spellStats.hasBuff(AugmentRandomize.INSTANCE)) {
+            float randomize = spellStats.getBuffCount(AugmentRandomize.INSTANCE) * 0.25f;
+            duration = world.random.nextIntBetweenInclusive((int) (duration * (1 - randomize)), (int) (duration * (1 + randomize)));
+        }
         EventQueue.getServerInstance().addEvent(
                 new DelayedSpellEvent(duration, rayTraceResult, world, newContext));
         Networking.sendToNearby(world, BlockPos.containing(safelyGetHitPos(rayTraceResult)),
@@ -69,7 +74,7 @@ public class EffectDelay extends AbstractEffect {
    @NotNull
     @Override
     public Set<AbstractAugment> getCompatibleAugments() {
-        return augmentSetOf(AugmentExtendTime.INSTANCE, AugmentDurationDown.INSTANCE);
+        return augmentSetOf(AugmentExtendTime.INSTANCE, AugmentDurationDown.INSTANCE, AugmentRandomize.INSTANCE);
     }
 
     @Override
