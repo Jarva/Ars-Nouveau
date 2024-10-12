@@ -14,7 +14,10 @@
     "light.ClientMixin",
     "light.EntityRendererMixin",
     "light.LevelRendererMixin",
-    "light.LightEntityMixin"
+    "light.LightEntityMixin",
+    "weather.WeatherMixins$ClientLevelDataMixin",
+    "weather.WeatherMixins$ClientLevelMixin",
+    "weather.WeatherMixins$LevelRendererMixin"
   ],
   "mixins": [
     "DamageSourceMixin",
@@ -36,7 +39,9 @@
     "rewind.RewindEntityMixin",
     "structure.StructureProcessorAccessor",
     "structure.StructureTemplateAccessor",
-    "structure.StructureTemplateMixin"
+    "structure.StructureTemplateMixin",
+    "weather.WeatherMixins$LevelMixin",
+    "weather.WeatherMixins$ServerLevelMixin"
   ],
   "minVersion": "0.8"
 }
