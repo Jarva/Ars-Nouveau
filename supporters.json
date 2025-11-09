@@ -52,7 +52,6 @@
     "d155b322-ff09-4c0f-9438-21ba7c572490",
     "bb21a5a9-4a9a-49f9-84f9-1ff375bca6bf",
     "1f470f2a-a05b-4b6b-9d84-4b62f8686e5b",
-    "d600e728-1c5e-4ee8-8df7-2899465c9129",
     "43ec37c2-8b0d-4bda-9f6a-5f78c3b572d0",
     "5a4971f3-6fb0-446e-8512-cca380ec7e85",
     "6859954f-e3b0-45a8-84d7-5f9e9782651f",
@@ -920,6 +919,12 @@
       "adopter": "Jarva",
       "color": "brown",
       "bio": "This Starbuncle is a glitch in the matrix."
+    },
+    {
+      "name": "Badbuncle",
+      "adopter": "Starbuncle.java_draft",
+      "color": "lime",
+      "bio": "This shouldn't make a PR"
     }
   ]
 }
