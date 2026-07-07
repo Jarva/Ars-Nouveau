@@ -156,7 +156,8 @@
     "00672791-a943-4ea6-93b1-d34e8a0563bf",
     "b04f1af3-7faf-4d42-9f36-fe5ee88a30d7",
     "38b2c6e8-9b7a-4b01-b423-62a8a1a675c7",
-    "712643f9-c60e-4f54-a5c8-1acbb948d668"
+    "712643f9-c60e-4f54-a5c8-1acbb948d668",
+    "56afa4b5-448b-4022-84ed-ecfb3a4b0b06"
   ],
   "starbuncleAdoptions": [
     {
@@ -1058,6 +1059,12 @@
       "adopter": "kohlbowers",
       "color": "purple",
       "bio": "Iris likes to explore and find new things"
+    },
+    {
+      "name": "Shiron",
+      "adopter": "Draxial",
+      "color": "light_gray",
+      "bio": "Shiron, the handsome Windragon in a more portable form, instead of nezucho he now becomes a starbuncle! He still can transform into the big beast but prefers to be portable. After lots of all types of adventuring with him, he became my indispensable partner, ready to go at anytime! Such a good boy! Shhh, don't tell I said that, he doesn't likes being called like that!"
     }
   ]
 }
